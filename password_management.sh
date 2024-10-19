@@ -30,10 +30,10 @@ while true; do
 				echo "そのサービスは登録されていません。"
 			#見つかった場合
 			else
-				user_name=$(echo $result | cut -d':' -f2)
+				user=$(echo $result | cut -d':' -f2)
 				password=$(echo $result | cut -d':' -f3)
-				echo "サービス名：$service_name"
-				echo "ユーザー名：$user_name"
+				echo "サービス名：$service"
+				echo "ユーザー名：$user"
 				echo "パスワード：$password"
 			fi
 			;;
