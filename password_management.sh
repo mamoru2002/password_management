@@ -4,7 +4,7 @@ ACCOUNT="password_management_table"
 
 while true; do
 	echo "パスワードマネージャへようこそ！"
-	echo "次の選択肢から入力してください(Add Password/Get Password)："
+	echo "次の選択肢から入力してください(Add Password/Get Password/Exit)："
 	read option
 
 	case $option in
@@ -36,6 +36,10 @@ while true; do
 				echo "ユーザー名：$user_name"
 				echo "パスワード：$password"
 			fi
+			;;
+		"Exit")
+			echo "Thank you!"
+			break
 			;;
 		
 	esac
