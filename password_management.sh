@@ -2,9 +2,11 @@
 
 ACCOUNT="password_management_table"
 
+echo "パスワードマネージャへようこそ!"
+echo "次の選択肢から入力してください(Add Password/Get Password/Exit)："
+
+
 while true; do
-	echo "パスワードマネージャへようこそ！"
-	echo "次の選択肢から入力してください(Add Password/Get Password/Exit)："
 	read option
 
 	case $option in
@@ -44,6 +46,9 @@ while true; do
 		*)
 			#選択肢以外の入力
 			echo "入力が間違えています。Add Password/Get Password/Exit から入力してください。"
+			continue
 			;;
 	esac
+
+	echo "次の選択肢から入力してください(Add Password/Get Password/Exit)："
 done
