@@ -41,6 +41,9 @@ while true; do
 			echo "Thank you!"
 			break
 			;;
-		
+		"*")
+			#選択肢以外の入力
+			echo "入力が間違えています。Add Password/Get Password/Exit から入力してください。"
+			;;
 	esac
 done
