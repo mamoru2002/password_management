@@ -19,6 +19,7 @@ while true; do
 			echo "パスワードを入力してください"
 			read password
 			echo "$service:$user:$password" >> $ACCOUNT
+			gpg --symmetric --batch --yes --passphrase "hogepass" $ACCOUNT
 			echo "パスワードの追加は成功しました。"
 			;;
 		"Get Password")
