@@ -1,6 +1,7 @@
 #!/bin/sh
 
 ACCOUNT="password_management_table"
+ENCRYPTED_ACCOUNT="password_management_table.gpg"
 
 echo "パスワードマネージャへようこそ!"
 echo "次の選択肢から入力してください(Add Password/Get Password/Exit)："
