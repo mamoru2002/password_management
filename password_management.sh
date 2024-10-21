@@ -18,6 +18,8 @@ while true; do
 			read user
 			echo "パスワードを入力してください"
 			read password
+
+			gpg --decrypt --batch --yes --passphrase "hogepass" -o $ACCOUNT $ENCRYPTED_ACCOUNT
 			echo "$service:$user:$password" >> $ACCOUNT
 			gpg --symmetric --batch --yes --passphrase "hogepass" $ACCOUNT
 			rm $ACCOUNT
