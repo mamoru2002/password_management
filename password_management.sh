@@ -28,9 +28,12 @@ while true; do
 			rm $ACCOUNT
 			echo "パスワードの追加は成功しました。"
 			;;
+
 		"Get Password")
 			echo "サービス名を入力してください："
 			read service
+
+			gpg --decrypt --batch --yes --passphrase "hogepass" -o $ACCOUNT $ENCRYPTED_ACCOUNT
 			
 			#入力されたサービス名からアカウントを検索
 			result=$(grep "^$service:" $ACCOUNT)
