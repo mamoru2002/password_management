@@ -32,7 +32,7 @@ while true; do
 		"Get Password")
 			echo "サービス名を入力してください："
 			read service
-
+			#復号化
 			gpg --decrypt --batch --yes --passphrase "hogepass" -o $ACCOUNT $ENCRYPTED_ACCOUNT
 			
 			#入力されたサービス名からアカウントを検索
@@ -49,6 +49,7 @@ while true; do
 				echo "ユーザー名：$user"
 				echo "パスワード：$password"
 			fi
+			rm $ACCOUNT
 			;;
 		"Exit")
 			echo "Thank you!"
